@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571700334273",
+    "project_id": "cc-mov-gr1-aagc",
+    "storage_bucket": "cc-mov-gr1-aagc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571700334273:android:78df4ef696f2e7143f0e40",
+        "android_client_info": {
+          "package_name": "com.example.ccgr12024b_aagc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO0U3siAUiuiCypqpruCH1pLYQPyA6J4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
