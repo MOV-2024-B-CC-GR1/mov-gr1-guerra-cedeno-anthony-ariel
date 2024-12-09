@@ -46,6 +46,11 @@ fun main() {
     calcularSueldo(bonoEspecial = 20.00, sueldo = 10.00, tasa = 14.00)
     // Gracias a NamedParameters se puede poner los parametros de cualquier orden, ademas se tendria que poner todos los parametros de manera obligatoria de caso contrario seria mucho mas complicado de mantener
 
+
+    // Funciones
+    Arreglos()
+
+
 }
 
 // FUNCIONES
@@ -73,5 +78,65 @@ fun calcularSueldo(sueldo: Double, tasa: Double=12.00, bonoEspecial: Double? = n
 }
 
 class Suma(unoParametro: Int, dosParametro: Int,):Numeros(unoParametro,dosParametro){
+
+}
+
+
+fun Arreglos (){
+    //Arreglos
+
+    val arregloEstatico : Array<Int> = arrayOf(1,2,3)
+    println(arregloEstatico)
+
+    //arreglos dinamicos
+    val arregloDinamico: ArrayList<Int> = arrayListOf<Int>(
+        1,2,3,4,5,6,6,4,4,4,4
+    )
+
+    println(arregloDinamico)
+    arregloDinamico.add(11)
+    arregloDinamico.add(13)
+    println(arregloDinamico)
+
+    // Operadores
+    // FOR EACH => UNIT // no retorna valores
+    // iterar un arreglo
+    val respuestasForEach: Unit = arregloDinamico.forEach{ valorActual:Int -> println("valor actual: ${valorActual}") }
+
+    // "it" significa el arreglo iterado
+    arregloDinamico.forEach { println("valor actual (it) :${it}") }
+
+    // MAP // si retorna valores
+    val respuestaMap: List<Double> = arregloDinamico.map { valorActual: Int -> return@map valorActual.toDouble() + 100.00 }
+
+    // FILTER  -> Filtrar Arreglos
+    // 1) devuelve objetos matematicos
+    // 2) Devuelve un arreglo filtrado
+
+    val respuestaFilter: List<Int> = arregloDinamico.filter { valorActual:Int -> val mayoresACinco: Boolean  = valorActual > 5; return@filter mayoresACinco }
+    val respuestaFilterDos = arregloDinamico.filter { it <= 5 }
+    println(respuestaFilter)
+    println(respuestaFilterDos)
+
+    //OR AND
+    // OR -> ANY : alguno cumple
+    // aND -> ALL : todos cumplen?
+
+    val respuestaAny: Boolean = arregloDinamico.any{valorActual:Int -> return@any (valorActual > 5)}
+    println(respuestaAny)
+
+    val respuestaAll: Boolean = arregloDinamico.all{valorActual:Int -> return@all (valorActual > 5)}
+    println(respuestaAll)
+
+
+    // REDUCE -> valor acumulado
+
+    /*
+    * El valor acumulado = 0 (siempre se empiza en 0 en Kotlin)
+    * con cada iteracion aumenta/incrementa el valor
+    * */
+
+    val respuestaReduce: Int = arregloDinamico.reduce{ acumulado:Int, valorActual:Int -> return@reduce (acumulado+valorActual)  }
+    println("Valor total acumulado : ${respuestaReduce}");
 
 }
