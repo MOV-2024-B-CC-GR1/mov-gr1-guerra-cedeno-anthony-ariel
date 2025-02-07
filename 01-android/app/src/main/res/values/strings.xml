@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ccgr12024b_aagc</string>
+    <string name="saludo">Hola a todos</string>
+    <color name="saludo_color">#FF00FFFF</color>
 </resources>
