@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="saludo_color">FF0000AA</color>
-</resources>
+<resources xmlns:tools="http://schemas.android.com/tools"></resources>

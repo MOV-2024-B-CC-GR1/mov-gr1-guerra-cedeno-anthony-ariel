@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">ccgr12024b_aagc</string>
-    <string name="saludo">Hola a todos</string>
+    <string name="app_name" translatable="false">ccgr12024b_aagc</string>
+    <string name="saludo" translatable="false">Hola a todos</string>
     <color name="saludo_color">#FF00FFFF</color>
+    <string-array name="string_array_opciones_dialogo">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+    </string-array>
 </resources>
